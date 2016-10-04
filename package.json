@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.1.5",
+    "director": "^1.2.0",
+    "react": "^0.13.3",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.0.2",
+    "tsify": "^1.0.7",
+    "typescript": "^2.0.3",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
