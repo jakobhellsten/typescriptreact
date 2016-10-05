@@ -1,3 +1,4 @@
+"use strict";
 var ALL_TODOS = 'all';
 exports.ALL_TODOS = ALL_TODOS;
 var ACTIVE_TODOS = 'active';

@@ -4,9 +4,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var todoModel_1 = require("./todoModel");
+var DocumentModel_1 = require("./DocumentModel");
 var footer_1 = require("./footer");
-var todoItem_1 = require("./todoItem");
+var DocumentListItem_1 = require("./DocumentListItem");
 var constants_1 = require("./constants");
 var TodoApp = (function (_super) {
     __extends(TodoApp, _super);
@@ -77,7 +77,7 @@ var TodoApp = (function (_super) {
             }
         });
         var todoItems = shownTodos.map(function (todo) {
-            return (React.createElement(todoItem_1.TodoItem, {key: todo.id, todo: todo, onToggle: _this.toggle.bind(_this, todo), onDestroy: _this.destroy.bind(_this, todo), onEdit: _this.edit.bind(_this, todo), editing: _this.state.editing === todo.id, onSave: _this.save.bind(_this, todo), onCancel: function (e) { return _this.cancel(); }}));
+            return (React.createElement(DocumentListItem_1.DocumentListItem, {key: todo.id, todo: todo, onToggle: _this.toggle.bind(_this, todo), onDestroy: _this.destroy.bind(_this, todo), onEdit: _this.edit.bind(_this, todo), editing: _this.state.editing === todo.id, onSave: _this.save.bind(_this, todo), onCancel: function (e) { return _this.cancel(); }}));
         });
         var activeTodoCount = todos.reduce(function (accum, todo) {
             return todo.completed ? accum : accum + 1;
@@ -101,9 +101,9 @@ var TodoApp = (function (_super) {
     };
     return TodoApp;
 }(React.Component));
-var model = new todoModel_1.TodoModel('react-todos');
+var model = new DocumentModel_1.DocumentModel('react-documents');
 function render() {
-    React.render(React.createElement(TodoApp, {model: model}), document.getElementsByClassName('todoapp')[0]);
+    React.render(React.createElement(TodoApp, {model: model}), document.getElementsByClassName('widget')[0]);
 }
 model.subscribe(render);
 render();

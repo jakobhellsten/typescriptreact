@@ -1,3 +1,4 @@
+"use strict";
 var Utils = (function () {
     function Utils() {
     }
@@ -41,5 +42,5 @@ var Utils = (function () {
         return newObj;
     };
     return Utils;
-})();
+}());
 exports.Utils = Utils;

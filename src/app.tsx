@@ -6,15 +6,21 @@
 
 /// <reference path="../typings/tsd.d.ts" />
 /// <reference path="./interfaces.d.ts"/>
+/// <reference path="../typings/react/react-global.d.ts" />
 
 declare var Router;
+//Uncaught ReferenceError: Router is not defined
 
-import { TodoModel } from "./DocumentModel";
+import React = require('react');
+//import Router = require('react-router');
+
+import { DocumentModel } from "./DocumentModel";
+//import { MenuModel } from "./MenuModel";
 import { TodoFooter } from "./footer";
-import { TodoItem } from "./DocumentListItem";
+import { DocumentListItem } from "./DocumentListItem";
 import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS, ENTER_KEY } from "./constants";
 
-class TodoApp extends React.Component<IAppProps, IAppState> {
+class EADocumentsApp extends React.Component<IAppProps, IAppState> {
 
   public state : IAppState;
 
@@ -100,7 +106,7 @@ class TodoApp extends React.Component<IAppProps, IAppState> {
 
     var todoItems = shownTodos.map((todo) => {
       return (
-        <TodoItem
+        <DocumentListItem
           key={todo.id}
           todo={todo}
           onToggle={this.toggle.bind(this, todo)}
@@ -168,12 +174,13 @@ class TodoApp extends React.Component<IAppProps, IAppState> {
   }
 }
 
-var model = new TodoModel('react-todos');
+var model = new DocumentModel('react-documents');
+//var menuModel = new MenuModel('ea-menuitems');
 
 function render() {
   React.render(
-    <TodoApp model={model}/>,
-    document.getElementsByClassName('todoapp')[0]
+    <EADocumentsApp model={model}/>,
+    document.getElementsByClassName('widget')[0]
   );
 }
 

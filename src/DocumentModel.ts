@@ -13,7 +13,7 @@ import { Utils } from "./utils";
 // may not even be worth separating this logic
 // out, but we do this to demonstrate one way to
 // separate out parts of your application.
-class DocumentModel implements ITodoModel {
+class DocumentModel implements IDocumentModel {
 
   public key : string;
   public todos : Array<ITodo>;
@@ -91,4 +91,4 @@ class DocumentModel implements ITodoModel {
   }
 }
 
-export { TodoModel };
+export { DocumentModel };

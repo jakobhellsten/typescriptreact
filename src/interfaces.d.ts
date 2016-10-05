@@ -27,7 +27,7 @@ interface ITodoFooterProps {
 }
 
 
-interface ITodoModel {
+interface IDocumentModel {
   key : any;
   todos : Array<ITodo>;
   onChanges : Array<any>;
@@ -41,8 +41,12 @@ interface ITodoModel {
   clearCompleted();
 }
 
+interface IMenuModel {
+  
+}
+
 interface IAppProps {
-  model : ITodoModel;
+  model : IDocumentModel;
 }
 
 interface IAppState {

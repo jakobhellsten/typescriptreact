@@ -22,11 +22,11 @@
     "files": [
         "src/constants.ts",
         "src/interfaces.d.ts",
-        "src/todoModel.ts",
+        "src/documentModel.ts",
         "src/utils.ts",
         "src/app.tsx",
         "src/footer.tsx",
-        "src/todoItem.tsx"
+        "src/DocumentListItem.tsx"
     ],
     "exclude": []
 }

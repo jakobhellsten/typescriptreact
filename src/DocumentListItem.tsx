@@ -7,6 +7,8 @@
 /// <reference path="../typings/tsd.d.ts" />
 /// <reference path="./interfaces.d.ts"/>
 
+import React = require('react');
+
 import { ENTER_KEY, ESCAPE_KEY } from "./constants";
 
 class DocumentListItem extends React.Component<ITodoItemProps, ITodoItemState> {
@@ -107,4 +109,4 @@ class DocumentListItem extends React.Component<ITodoItemProps, ITodoItemState> {
   }
 }
 
-export { TodoItem };
+export { DocumentListItem };
